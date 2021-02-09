@@ -26,7 +26,7 @@ Before you can use the API you'll need to get your application id and applicatio
 **Create Embed**
 ![Presence API ](./assets/Create_Embed_API.png)
 ----
-  Use this API to create Embed, use the parameters explained below.
+  Use this API to create Embed, accepted parameters are explained below.
 
 * **URL**
 
@@ -55,3 +55,55 @@ The request body accepts the below json format. `applicationId` and `url` are th
 	  "width": number
   }
 ```
+**Update Embed**
+![Presence API ](./assets/Update_Embed_API.png)
+----
+  Use this API to update Embed, accepted parameters are explained below.
+
+* **URL**
+
+  /embedClient/update/{id}/{appId}/{key}
+
+* **Method:**
+  
+  The request type is `PUT` 
+  
+*  **URL Params**
+
+   **Required:**
+   * `id=[string]` 
+   * `appId=[string]`   
+   * `key=[string]`
+
+* **Request body**
+    <br/>
+The request body accepts the below json format.You can specify your own height and width in `px`. If the width or height value is not specified the default values (`height=700px` and `width='100%'`) will be used. 
+```
+  {
+	  "applicationId": "string",
+	  "title": "string", 
+	  "url": "string",
+	  "height": number,
+	  "width": number
+  }
+```
+
+**Delete Embed**
+![Presence API ](./assets/Delete_Embed_API.png)
+----
+  Use this API to delete existing Embed, accepted parameters are explained below.
+
+* **URL**
+
+  /embedClient/delete/{id}/{appId}/{key}
+
+* **Method:**
+  
+  The request type is `DELETE` 
+  
+*  **URL Params**
+
+   **Required:**
+   * `id=[string]` 
+   * `appId=[string]`   
+   * `key=[string]`
